@@ -1,0 +1,19 @@
+{
+  "name": "gstjs",
+  "version": "1.0.0",
+  "description": "A GST Calculation Vanilla JS Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forrest-wilson/gstjs.git"
+  },
+  "author": "Forrest Wilson-Jennings",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forrest-wilson/gstjs/issues"
+  },
+  "homepage": "https://github.com/forrest-wilson/gstjs#readme"
+}
