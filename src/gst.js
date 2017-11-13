@@ -15,3 +15,13 @@ GST.getTotal = function(subtotal) {
 
     return roundedTotal;
 }
+
+GST.getSubtotal = function(total) {
+    var tot = parseFloat(total);
+    var roundedTot = GST.round(tot, 2);
+
+    var subtotal = roundedTot / (1 + GST.gstPercent);
+    var roundedSubtotal = GST.round(subtotal, 2);
+
+    return roundedSubtotal;
+}
