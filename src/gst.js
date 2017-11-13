@@ -1,3 +1,5 @@
+"use strict";
+
 var GST = {};
 
 GST.gstPercent = 0.15;
