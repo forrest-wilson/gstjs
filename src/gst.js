@@ -7,27 +7,34 @@ GST.gstPercent = 0.15;
 
 // Round the number to 2dp
 GST.round = function(value, decimals) {
+    if (typeof decimals === "undefined" || typeof decimals === "string") decimals = 2;
+
     return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
 
 // Get the total by passing in the subtotal and percentage
 GST.getTotal = function(subtotal) {
-    var sub = parseFloat(subtotal);
-    var roundedSub = GST.round(sub, 2);
-
-    var total = roundedSub * (1 + GST.gstPercent);
-    var roundedTotal = GST.round(total, 2);
+    // Parses the string/number passed in to the function
+    var sub = parseFloat(subtotal),
+        roundedSub = GST.round(sub),
+        total = roundedSub * (1 + GST.gstPercent),
+        roundedTotal = GST.round(total);
 
     return roundedTotal;
 }
 
 // Get the total by passing in the total and percentage
 GST.getSubtotal = function(total) {
-    var tot = parseFloat(total);
-    var roundedTot = GST.round(tot, 2);
-
-    var subtotal = roundedTot / (1 + GST.gstPercent);
-    var roundedSubtotal = GST.round(subtotal, 2);
+    // Parses the string/number passed in to the function
+    var tot = parseFloat(total),
+        roundedTot = GST.round(tot),
+        subtotal = roundedTot / (1 + GST.gstPercent),
+        roundedSubtotal = GST.round(subtotal);
 
     return roundedSubtotal;
+}
+
+// Get the GST percentage by passing in the total and subtotal
+GST.getGST = function(total, subtotal) {
+    return total - subtotal;
 }
