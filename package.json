@@ -4,7 +4,7 @@
   "description": "A GST Calculation Vanilla JS Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/forrest-wilson/gstjs#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-uglify": "^3.0.0"
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "3.0.0",
+    "run-sequence": "2.2.0"
   }
 }
