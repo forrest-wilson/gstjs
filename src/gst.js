@@ -24,6 +24,12 @@ var GST = (function() {
         getGST: function(tot, sub) {
             var roundGST = (tot - sub).toFixed(2);
             return roundGST;
+        },
+        formatter: function(tot, sign) {
+            if (typeof sign === "undefined") sign = "$";
+            if (typeof tot === "undefined") tot = "0.00";
+
+            return sign + tot;
         }
     };
 
