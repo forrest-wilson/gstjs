@@ -1,6 +1,6 @@
 var GST = (function() {
 
-    var GST = {
+    var _ = {
         percent: 0.15,
         denom: function() {
             return this.percent + 1;
@@ -34,6 +34,6 @@ var GST = (function() {
         }
     };
 
-    return GST;
+    return _;
 
 })();
