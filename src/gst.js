@@ -12,7 +12,7 @@ var GST = (function() {
     
             return roundTotal;
         },
-        getSubtotal: function(total) {
+        getSubtotal: function(tot) {
             var roundTot = parseFloat(tot).toFixed(2),
                 subtotal = roundTot / this.denom(),
                 roundSub = subtotal.toFixed(2);
