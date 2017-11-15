@@ -10,15 +10,9 @@
     <script src="gst.js"></script>
     <script>
         (function() {
-            GST.gstPercent = 0.2;
-            
-            var tot = GST.getTotal(10);
+            var gst = GST;
 
-            console.log(tot);
-
-            var gst = GST.getGST(12, 10);
-
-            console.log(gst);
+            console.log(gst.getTotal(10));
         })();
     </script>
 </body>
