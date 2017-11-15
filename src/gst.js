@@ -31,7 +31,7 @@ var GST = (function() {
             return roundSub;
         },
         getGST: function(total, sub) {
-            var roundGST = GST.round(total - sub);
+            var roundGST = this.round(total - sub);
             return roundGST;
         }
     };
