@@ -6,24 +6,21 @@ var GST = (function() {
             return this.percent + 1;
         },
         getTotal: function(subtot) {
-            var sub = parseFloat(subtot),
-                roundSub = sub.toFixed(2),
+            var roundSub = parseFloat(subtot).toFixed(2),
                 tot = roundSub * this.denom(),
                 roundTotal = tot.toFixed(2);
     
             return roundTotal;
         },
         getSubtotal: function(total) {
-            var tot = parseFloat(total),
-                roundTot = tot.toFixed(2),
+            var roundTot = parseFloat(tot).toFixed(2),
                 subtotal = roundTot / this.denom(),
                 roundSub = subtotal.toFixed(2);
     
             return roundSub;
         },
         getGST: function(tot, sub) {
-            var roundGST = (tot - sub).toFixed(2);
-            return roundGST;
+            return (tot - sub).toFixed(2);
         },
         formatter: function(tot, sign) {
             if (typeof sign === "undefined") sign = "$";
