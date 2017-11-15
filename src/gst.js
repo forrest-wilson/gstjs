@@ -1,7 +1,5 @@
 var GST = (function() {
 
-    "use strict";
-
     var GST = {
         percent: 0.15,
         denom: function() {
