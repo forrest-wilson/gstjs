@@ -10,12 +10,12 @@ var GST = (function() {
             
             return Number(Math.round(val + "e" + dec) + "e-" + dec);
         },
-        getTotal: function(subtotal) {
+        getTotal: function(subtot) {
             // Parses the string/number passed in to the function
-            var sub = parseFloat(subtotal),
+            var sub = parseFloat(subtot),
                 roundSub = this.round(sub),
-                total = roundSub * this.denom(),
-                roundTotal = this.round(total);
+                tot = roundSub * this.denom(),
+                roundTotal = this.round(tot);
     
             return roundTotal;
         },
