@@ -7,10 +7,12 @@
     <title>GST JS</title>
 </head>
 <body>
-    <script src="gst.js"></script>
+    <script src="../dist/gst.min.js"></script>
     <script>
         (function() {
-            
+            var gst = GST;
+            gst.percent = 0.2;
+            console.log(gst.getSubtotal(10.50));
         })();
     </script>
 </body>
