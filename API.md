@@ -18,3 +18,10 @@ var gst = new GST;
 
 ### .getTotal(subtotal)
 
+### .getSubtotal(total)
+
+### .getGST(total, subtotal)
+
+### .getPercent(total, subtotal)
+
+### .formatter(total, currencySign)
