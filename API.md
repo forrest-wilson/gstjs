@@ -74,5 +74,5 @@ typeof currencySign => string
 Percentage is stored as a decimal (i.e. 15% is 0.15).
 
 ```javascript
-gst.percent = number
+gst.percent = 0.1
 ```
