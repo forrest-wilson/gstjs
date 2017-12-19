@@ -58,7 +58,7 @@ typeof total && typeof subtotal => number || string
 
 ### .formatter(total, currencySign)
 
-Returns a formatted string with the currency sign of choice. Default is "$".
+Returns a formatted string with the currency sign of choice. Default return value is "$0.00".
 
 ```javascript
 gst.formatter(total, currencySign)
