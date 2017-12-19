@@ -30,5 +30,5 @@ function GST() {
 
             return sign + tot;
         }
-    }
+    };
 }
