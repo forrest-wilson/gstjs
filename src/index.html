@@ -10,9 +10,9 @@
     <script src="../dist/gst.min.js"></script>
     <script>
         (function() {
-            var gst = GST;
-            gst.percent = 0.2;
-            console.log(gst.getSubtotal(10.50));
+            let gst = new GST;
+
+            console.log(gst.getPercent(50, 45));
         })();
     </script>
 </body>
