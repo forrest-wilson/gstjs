@@ -16,12 +16,42 @@ var gst = new GST;
 
 ## Methods
 
-### .getTotal(subtotal) => number
+### .getTotal(subtotal)
 
-### .getSubtotal(total) => number
+```javascript
+gst.getTotal(subtotal)
+typeof subtotal => number || string
+```
 
-### .getGST(total, subtotal) => number
+### .getSubtotal(total)
 
-### .getPercent(total, subtotal) => number
+```javascript
+gst.getSubtotal(total)
+typeof total => number || string
+```
 
-### .formatter(total, currencySign) => string
+### .getGST(total, subtotal)
+
+```javascript
+gst.getGST(total, subtotal)
+typeof total && typeof subtotal => number || string
+```
+
+### .getPercent(total, subtotal)
+
+```javascript
+gst.getPercent(total, subtotal)
+typeof total && typeof subtotal => number || string
+```
+
+### .formatter(total, currencySign)
+
+```javascript
+gst.formatter(total, currencySign)
+typeof total => number || string
+typeof currencySign => string
+```
+
+## Properties
+
+### GST Percent
