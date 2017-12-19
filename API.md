@@ -20,6 +20,7 @@ var gst = new GST;
 
 ```javascript
 gst.getTotal(subtotal)
+
 typeof subtotal => number || string
 ```
 
@@ -27,6 +28,7 @@ typeof subtotal => number || string
 
 ```javascript
 gst.getSubtotal(total)
+
 typeof total => number || string
 ```
 
@@ -34,6 +36,7 @@ typeof total => number || string
 
 ```javascript
 gst.getGST(total, subtotal)
+
 typeof total && typeof subtotal => number || string
 ```
 
@@ -41,6 +44,7 @@ typeof total && typeof subtotal => number || string
 
 ```javascript
 gst.getPercent(total, subtotal)
+
 typeof total && typeof subtotal => number || string
 ```
 
@@ -48,6 +52,7 @@ typeof total && typeof subtotal => number || string
 
 ```javascript
 gst.formatter(total, currencySign)
+
 typeof total => number || string
 typeof currencySign => string
 ```
@@ -55,3 +60,9 @@ typeof currencySign => string
 ## Properties
 
 ### GST Percent
+
+Percentage is stored as a decimal (i.e. 15% is 0.15).
+
+```javascript
+gst.percent = number
+```
