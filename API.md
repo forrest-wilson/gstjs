@@ -11,7 +11,7 @@
 ### JS
 
 ```javascript
-var gst = new GST;
+var gst = new GST();
 ```
 
 ## Methods
