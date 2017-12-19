@@ -18,15 +18,17 @@ var gst = new GST;
 
 ### .getTotal(subtotal)
 
+Returns the GST inclusive number.
+
 ```javascript
 gst.getTotal(subtotal)
 
 typeof subtotal => number || string
 ```
 
-Returns the GST inclusive number.
-
 ### .getSubtotal(total)
+
+Returns the GST exclusive number.
 
 ```javascript
 gst.getSubtotal(total)
@@ -34,9 +36,9 @@ gst.getSubtotal(total)
 typeof total => number || string
 ```
 
-Returns the GST exclusive number.
-
 ### .getGST(total, subtotal)
+
+Returns the GST component of a transaction.
 
 ```javascript
 gst.getGST(total, subtotal)
@@ -44,9 +46,9 @@ gst.getGST(total, subtotal)
 typeof total && typeof subtotal => number || string
 ```
 
-Returns the GST component of a transaction.
-
 ### .getPercent(total, subtotal)
+
+Returns the GST percentage of a transaction.
 
 ```javascript
 gst.getPercent(total, subtotal)
@@ -54,9 +56,9 @@ gst.getPercent(total, subtotal)
 typeof total && typeof subtotal => number || string
 ```
 
-Returns the GST percentage of a transaction.
-
 ### .formatter(total, currencySign)
+
+Returns a formatted string with the currency sign of choice. Default is "$".
 
 ```javascript
 gst.formatter(total, currencySign)
@@ -64,8 +66,6 @@ gst.formatter(total, currencySign)
 typeof total => number || string
 typeof currencySign => string
 ```
-
-Returns a formatted string with the currency sign of choice. Default is "$".
 
 ## Properties
 
