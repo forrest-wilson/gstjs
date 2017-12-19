@@ -1,6 +1,6 @@
 # GST JS
 
-## A Simple Vanilla JS Plugin for GST Calculation
+### A Simple Vanilla JS Plugin for GST Calculation
 
 ## Basic Usage
 
