@@ -58,6 +58,16 @@ gst.getPercent(total, subtotal)
 typeof total && typeof subtotal => number || string
 ```
 
+### .setPercent(decimal)
+
+Sets the constructors .percent property
+
+```javascript
+gst.setPercent(decimal)
+
+typeof decimal => number || string
+```
+
 ### .formatter(total, currencySign)
 
 Returns a formatted string with the currency sign of choice. Default return value is "$0.00".
@@ -76,5 +86,5 @@ typeof currencySign => string
 Percentage is stored as a decimal (i.e. 15% is 0.15).
 
 ```javascript
-gst.percent = 0.1
+gst.percent
 ```

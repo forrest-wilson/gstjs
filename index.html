@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GST.JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-okaidia.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+    <!-- Inline CSS -->
+    <style>
+        /* Element CSS */
+
+        *, .demo > input {
+            font-family: "Questrial", sans-serif;
+        }
+
+        header {
+            position: relative;
+        }
+
+        header h1 {
+            position: relative;
+            line-height: 100px;
+        }
+
+        header h1, header p {
+            color: rgb(90, 90, 90);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        main {
+            background-color: #1AC31A;
+        }
+
+        section.inner {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* CSS Classes */
+
+        .inner {
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .button-green, .button-white {
+            font-family: "Questrial", sans-serif;
+            padding: 20px 30px;
+            margin: 20px auto;
+            width: auto;
+            min-width: 200px;
+            max-width: 300px;
+            position: relative;
+            outline: 0;
+            border: 0;
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 0.3em;
+        }
+
+        .button-green {
+            color: white;
+            background-color: #1AC31A;
+        }
+
+        .button-green:hover {
+            background-color: rgb(50, 225, 50);
+        }
+
+        .button-white {
+            color: rgb(90, 90, 90);
+            background-color: white;
+        }
+
+        .method {
+            padding-bottom: 10px;
+        }
+
+        .demo > input {
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .demo > input::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .underline {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            display: block;
+            margin-top: 25px;
+        }
+
+        /* Prism CSS Overwriting */
+
+        pre[class*=language-] {
+            padding: 0 10px;
+            margin: 0;
+        }
+
+        pre[class*=language-], code[class*=language-] {
+            white-space: pre-line;
+        }
+
+        .token.operator {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header class="inner">
+        <h1>GST.JS</h1>
+        <p>A Simple Vanilla Javascript Plugin for calculating GST.</p>
+        <a class="button-green">Download Now</a>
+        <a href="https://github.com/forrest-wilson/gstjs" target="_blank" class="button-green">View on Github</a>
+    </header>
+
+    <main>
+        <section class="inner">
+            <h2>Basic Usage</h2>
+            <article class="method">
+                <p>HTML</p>
+                <pre>
+                    <code class="language-html">
+                        &lt;script src="gst.min.js">&lt;/script>
+                    </code>
+                </pre>
+            </article>
+            <article class="method">
+                <p>JS</p>
+                <pre>
+                    <code class="language-javascript">
+                        var gst = new GST();
+                    </code>
+                </pre>
+            </article>
+        </section>
+
+        <section class="inner">
+            <h2>Methods</h2>
+
+            <article class="method">
+                <p>.getTotal(subtotal)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.getTotal(50);
+                    </code>
+                </pre>
+            </article>
+
+            <article class="method">
+                <p>.getSubtotal(total)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.getSubtotal(50);
+                    </code>
+                </pre>
+            </article>
+
+            <article class="method">
+                <p>.getGST(total, subtotal)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.getGST(50, 42.5);
+                    </code>
+                </pre>
+            </article>
+
+            <article class="method">
+                <p>.getPercent(total, subtotal)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.getPercent(50, 42.5);
+                    </code>
+                </pre>
+            </article>
+
+            <article class="method">
+                <p>.setPercent(decimal)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.setPercent(0.2);
+                    </code>
+                </pre>
+            </article>
+
+            <article class="method">
+                <p>.formatter(total, currencySign)</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.formatter(50, "$");
+                    </code>
+                </pre>
+            </article>
+        </section>
+
+        <section class="inner">
+            <h2>Properties</h2>
+
+            <article class="method">
+                <p>.percent</p>
+                <pre>
+                    <code class="language-javascript">
+                        gst.percent = 0.15;
+                        // 0.15 is the default
+                        // use the .setPercent() method to change
+                    </code>
+                </pre>
+            </article>
+        </section>
+
+        <section class="inner">
+            <h2>Demo</h2>
+            <article class="method demo">
+                <p>GST.getTotal()</p>
+
+                <input type="text" placeholder="Enter a Number" id="getTotalInput">
+                <input type="text" placeholder="The result will end up here" id="getTotalOutput" readonly>
+
+                <button id="getTotal" class="button-white">.getTotal()</button>
+
+                <span class="underline"></span>
+            </article>
+
+            <article class="method demo">
+                <p>GST.getSubtotal()</p>
+
+                <input type="text" placeholder="Enter a Number" id="getSubtotalInput">
+                <input type="text" placeholder="The result will end up here" id="getSubtotalOutput" readonly>
+
+                <button id="getSubtotal" class="button-white">.getSubtotal()</button>
+
+                <span class="underline"></span>
+            </article>
+
+            <article class="method demo">
+                <p>GST.getGST()</p>
+
+                <input type="text" placeholder="Enter a Total" id="getGSTTotalInput">
+                <input type="text" placeholder="Enter a Subtotal" id="getGSTSubtotalInput">
+                <input type="text" placeholder="The result will end up here" id="getGSTOutput" readonly>
+
+                <button id="getGST" class="button-white">.getGST()</button>
+
+                <span class="underline"></span>
+            </article>
+
+            <article class="method demo">
+                <p>GST.getPercent()</p>
+
+                <input type="text" placeholder="Enter a Total" id="getPercentTotalInput">
+                <input type="text" placeholder="Enter a Subtotal" id="getPercentSubtotalInput">
+                <input type="text" placeholder="The result will end up here" id="getPercentOutput" readonly>
+
+                <button id="getPercent" class="button-white">.getPercent()</button>
+
+                <span class="underline"></span>
+            </article>
+
+            <article class="method demo">
+                <p>GST.setPercent()</p>
+
+                <input type="text" placeholder="Enter a Decimal" id="gstPercentInput">
+                <input type="text" placeholder="The result will end up here" id="gstPercentOutput" readonly>
+
+                <button id="gstPercent" class="button-white">.setPercent</button>
+
+                <span class="underline"></span>
+            </article>
+
+            <article class="method demo">
+                <p>GST.formatter()</p>
+
+                <input type="text" placeholder="Enter a Total" id="getFormatterTotalInput">
+                <input type="text" placeholder="Enter a Currency Sign" id="getFormatterCurrencySignInput">
+                <input type="text" placeholder="The result will end up here" id="getFormatterOutput" readonly>
+
+                <button id="getFormatter" class="button-white">.formatter()</button>
+
+                <span class="underline"></span>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js"></script>
+    <script src="./gstjs/gst.min.js"></script>
+    <script>
+        (function() {
+            var gst = new GST();
+
+            // .getTotal() Method Demo
+            document.getElementById("getTotal").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var number = document.getElementById("getTotalInput").value;
+                document.getElementById("getTotalOutput").value = gst.getTotal(number);
+            });
+
+            // .getSubtotal() Method Demo
+            document.getElementById("getSubtotal").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var number = document.getElementById("getSubtotalInput").value;
+                document.getElementById("getSubtotalOutput").value = gst.getSubtotal(number);
+            });
+
+            // .getGST() Method Demo
+            document.getElementById("getGST").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var total = document.getElementById("getGSTTotalInput").value;
+                var subtotal = document.getElementById("getGSTSubtotalInput").value;
+                document.getElementById("getGSTOutput").value = gst.getGST(total, subtotal);
+            });
+
+            // .getPercent() Method Demo
+            document.getElementById("getPercent").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var total = document.getElementById("getPercentTotalInput").value;
+                var subtotal = document.getElementById("getPercentSubtotalInput").value;
+                document.getElementById("getPercentOutput").value = gst.getPercent(total, subtotal);
+            });
+
+            // .setPercent() Method Demo
+            document.getElementById("gstPercent").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var percent = document.getElementById("gstPercentInput").value;
+                gst.setPercent(percent);
+                document.getElementById("gstPercentOutput").value = gst.percent;
+            });
+
+            // .formatter() Method Demo
+            document.getElementById("getFormatter").addEventListener("click", function(e) {
+                e.preventDefault();
+
+                var total = document.getElementById("getFormatterTotalInput").value;
+                var subtotal = document.getElementById("getFormatterCurrencySignInput").value;
+                document.getElementById("getFormatterOutput").value = gst.formatter(total, subtotal);
+            });
+        })();
+    </script>
+</body>
+</html>
