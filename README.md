@@ -2,6 +2,8 @@
 
 ### A Simple Vanilla JS Plugin for GST Calculation
 
+https://forrest-wilson.github.io/gstjs/
+
 ## Basic Usage
 
 ### HTML
