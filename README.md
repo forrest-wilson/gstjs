@@ -60,7 +60,7 @@ typeof total && typeof subtotal => number || string
 
 ### .setPercent(decimal)
 
-Sets the constructors .percent property
+Sets the constructors' .percent property
 
 ```javascript
 gst.setPercent(decimal)
