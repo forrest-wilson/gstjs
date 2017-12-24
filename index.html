@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-okaidia.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
     <!-- Inline CSS -->
     <style>
         /* Element CSS */
+
+        * {
+            box-sizing: border-box;
+        }
 
         *, .demo > input {
             font-family: "Questrial", sans-serif;
@@ -39,6 +44,14 @@
         section.inner {
             max-width: 750px;
             margin: 0 auto;
+        }
+
+        footer {
+            background-color: white;
+        }
+
+        footer > div {
+            color: rgb(90, 90, 90);
         }
 
         /* CSS Classes */
@@ -104,6 +117,22 @@
             background-color: white;
             display: block;
             margin-top: 25px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .social-icons {
+            font-size: 24px;
+            text-align: right;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .social-icons > a {
+            text-decoration: none;
+            color: rgb(90, 90, 90);
         }
 
         /* Prism CSS Overwriting */
@@ -295,6 +324,12 @@
                 <span class="underline"></span>
             </article>
         </section>
+
+        <footer class="inner">
+            <div class="social-icons inner">
+                <a href="https://github.com/forrest-wilson" target="_blank" class="fa fa-github"></a>
+            </div>
+        </footer>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js"></script>
