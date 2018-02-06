@@ -239,21 +239,6 @@
         </section>
 
         <section class="inner">
-            <h2>Properties</h2>
-
-            <article class="method">
-                <p>.percent</p>
-                <pre>
-                    <code class="language-javascript">
-                        gst.percent = 0.15;
-                        // 0.15 is the default
-                        // use the .setPercent() method to change
-                    </code>
-                </pre>
-            </article>
-        </section>
-
-        <section class="inner">
             <h2>Demo</h2>
             <article class="method demo">
                 <p>GST.getTotal()</p>
@@ -297,17 +282,6 @@
                 <input type="text" placeholder="The result will end up here" id="getPercentOutput" readonly>
 
                 <button id="getPercent" class="button-white">.getPercent()</button>
-
-                <span class="underline"></span>
-            </article>
-
-            <article class="method demo">
-                <p>GST.setPercent()</p>
-
-                <input type="text" placeholder="Enter a Decimal" id="gstPercentInput">
-                <input type="text" placeholder="The result will end up here" id="gstPercentOutput" readonly>
-
-                <button id="gstPercent" class="button-white">.setPercent</button>
 
                 <span class="underline"></span>
             </article>
@@ -370,15 +344,6 @@
                 var total = document.getElementById("getPercentTotalInput").value;
                 var subtotal = document.getElementById("getPercentSubtotalInput").value;
                 document.getElementById("getPercentOutput").value = gst.getPercent(total, subtotal);
-            });
-
-            // .setPercent() Method Demo
-            document.getElementById("gstPercent").addEventListener("click", function(e) {
-                e.preventDefault();
-
-                var percent = document.getElementById("gstPercentInput").value;
-                gst.setPercent(percent);
-                document.getElementById("gstPercentOutput").value = gst.percent;
             });
 
             // .formatter() Method Demo

@@ -15,7 +15,10 @@ https://forrest-wilson.github.io/gstjs/
 ### JS
 
 ```javascript
-var gst = new GST();
+// decimalPercent should be written as a decimal
+// e.g. a 25% GST rate should be defined as 0.25
+// Only decimalPercent's smaller than 1 will be accepted
+var gst = new GST(decimalPercent);
 ```
 
 ## Methods
@@ -27,7 +30,7 @@ Returns the GST inclusive number.
 ```javascript
 gst.getTotal(subtotal)
 
-typeof subtotal => number || string
+typeof subtotal ? number : string
 ```
 
 ### .getSubtotal(total)
@@ -37,7 +40,7 @@ Returns the GST exclusive number.
 ```javascript
 gst.getSubtotal(total)
 
-typeof total => number || string
+typeof total ? number : string
 ```
 
 ### .getGST(total, subtotal)
@@ -47,7 +50,7 @@ Returns the GST component of a transaction.
 ```javascript
 gst.getGST(total, subtotal)
 
-typeof total && typeof subtotal => number || string
+typeof total && typeof subtotal ? number : string
 ```
 
 ### .getPercent(total, subtotal)
@@ -57,17 +60,7 @@ Returns the GST percentage of a transaction.
 ```javascript
 gst.getPercent(total, subtotal)
 
-typeof total && typeof subtotal => number || string
-```
-
-### .setPercent(decimal)
-
-Sets the constructors' .percent property
-
-```javascript
-gst.setPercent(decimal)
-
-typeof decimal => number || string
+typeof total && typeof subtotal ? number : string
 ```
 
 ### .formatter(total, currencySign)
@@ -77,16 +70,6 @@ Returns a formatted string with the currency sign of choice. Default return valu
 ```javascript
 gst.formatter(total, currencySign)
 
-typeof total => number || string
-typeof currencySign => string
-```
-
-## Properties
-
-### GST Percent
-
-Percentage is stored as a decimal (i.e. 15% is 0.15).
-
-```javascript
-gst.percent
+typeof total ? number : string
+typeof currencySign = string
 ```
