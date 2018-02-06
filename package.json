@@ -18,8 +18,10 @@
   "homepage": "https://github.com/forrest-wilson/gstjs#readme",
   "devDependencies": {
     "gulp": "3.9.1",
+    "gulp-jshint": "2.1.0",
     "gulp-rename": "1.2.2",
     "gulp-uglify": "3.0.0",
+    "jshint": "2.9.5",
     "run-sequence": "2.2.0"
   }
 }
